@@ -132,93 +132,96 @@ window.onscroll = function () {
   }
 };
 
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 3,
-          spaceBetween: 50,
-          freeMode: true,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 50,
+  freeMode: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
-        var swiper = new Swiper(".mySwiper", {
-          //slidesPerView: 2,
-          // centeredSlides: true,
-          // centeredSlidesBounds: true,
-          freeMode: true,
-          // spaceBetween: 15,
-          //cssMode: true,
+var swiper = new Swiper(".mySwiper", {
+  //slidesPerView: 2,
+  // centeredSlides: true,
+  // centeredSlidesBounds: true,
+  freeMode: true,
+  // spaceBetween: 15,
+  //cssMode: true,
 
-          breakpoints: {
-            // when window width is >= 320px
-            1: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            // when window width is >= 480px
-            426: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            },
-            // when window width is >= 640px
-            769: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-          },
-        });
+  breakpoints: {
+    // when window width is >= 320px
+    1: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    // when window width is >= 480px
+    426: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    // when window width is >= 640px
+    769: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
+});
     
-
-            $(".small-c2").hover(function() {
-            $(this).css("background-color", "#1B92EC");
-            $(".fa-book-open").css("color", "white");
-            $(".title1").css("color", "white");
-
-        }, function() {
-            $(this).css("background-color", "white");
-            $(".fa-book-open").css("color", "#FF7A01");
-            $(".title1").css("color", "#1B92EC");
-
-        });
-        $(".small-c3").hover(function() {
-            $(this).css("background-color", "#1B92EC");
-            $(".fa-university").css("color", "white");
-            $(".title2").css("color", "white");
-
-        }, function() {
-            $(this).css("background-color", "white");
-            $(".fa-university").css("color", "#FF7A01");
-            $(".title2").css("color", "#1B92EC");
-
-        });
-        $(".small-c4").hover(function() {
-            $(this).css("background-color", "#1B92EC");
-            $(".fa-graduation-cap").css("color", "white");
-            $(".tittle3").css("color", "white");
-
-        }, function() {
-            $(this).css("background-color", "white");
-            $(".fa-graduation-cap").css("color", "#FF7A01");
-            $(".tittle3").css("color", "#1B92EC");
-
-        });
-        $(".small-c11").hover(function() {
-            $(this).css("background-color", "#1B92EC");
-            $(".fa-trophy").css("color", "white");
-            $(".tittle0").css("color", "white");
-
-        }, function() {
-            $(this).css("background-color", "white");
-            $(".fa-trophy").css("color", "#FF7A01");
-            $(".tittle0").css("color", "#1B92EC");
-
-        });
-        $(".small-c5").hover(function() {
-            $(".internal-circle").css("background-color", "#FF7A01");
-
-        }, function() {
-
-            $(".internal-circle").css("background-color", "#1B92EC");
-
-        });
+$(".small-c2").hover(
+  function () {
+    $(this).css("background-color", "#1B92EC");
+    $(".fa-book-open").css("color", "white");
+    $(".title1").css("color", "white");
+  },
+  function () {
+    $(this).css("background-color", "white");
+    $(".fa-book-open").css("color", "#FF7A01");
+    $(".title1").css("color", "#1B92EC");
+  }
+);
+$(".small-c3").hover(
+  function () {
+    $(this).css("background-color", "#1B92EC");
+    $(".fa-university").css("color", "white");
+    $(".title2").css("color", "white");
+  },
+  function () {
+    $(this).css("background-color", "white");
+    $(".fa-university").css("color", "#FF7A01");
+    $(".title2").css("color", "#1B92EC");
+  }
+);
+$(".small-c4").hover(
+  function () {
+    $(this).css("background-color", "#1B92EC");
+    $(".fa-graduation-cap").css("color", "white");
+    $(".tittle3").css("color", "white");
+  },
+  function () {
+    $(this).css("background-color", "white");
+    $(".fa-graduation-cap").css("color", "#FF7A01");
+    $(".tittle3").css("color", "#1B92EC");
+  }
+);
+$(".small-c11").hover(
+  function () {
+    $(this).css("background-color", "#1B92EC");
+    $(".fa-trophy").css("color", "white");
+    $(".tittle0").css("color", "white");
+  },
+  function () {
+    $(this).css("background-color", "white");
+    $(".fa-trophy").css("color", "#FF7A01");
+    $(".tittle0").css("color", "#1B92EC");
+  }
+);
+$(".small-c5").hover(
+  function () {
+    $(".internal-circle").css("background-color", "#FF7A01");
+  },
+  function () {
+    $(".internal-circle").css("background-color", "#1B92EC");
+  }
+);
