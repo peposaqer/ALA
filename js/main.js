@@ -11,7 +11,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $(".card-1 .fa-chevron-down").click(function () {
-    $(".card-1 .card-text").css("display", "none");
+    $(".card-1 .card-text").slideUp(500);
+    // $(".card-1 .card-text").css("display", "none");
     $(".card-1 .fa-chevron-down").css("display", "none");
     $(".card-2 .card-text").css("transition", "ease-in-out .3s");
     $(".card-1 .fa-chevron-right").css("display", "inline");
@@ -19,25 +20,6 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function () {
-  $(".card-2 .fa-chevron-right").click(function () {
-    $(".card-2 .card-text").css("display", "block");
-    $(".card-2 .fa-chevron-right").css("display", "none");
-    $(".card-2 .card-text").css("transition", "ease-in-out .3s");
-    $(".card-2 .fa-chevron-down").css("display", "inline");
-    $(".card-2 .card h5").css("border-bottom", "1px solid #E5E5E5");
-  });
-});
-
-$(document).ready(function () {
-  $(".card-2 .fa-chevron-down").click(function () {
-    $(".card-2 .card-text").css("display", "none");
-    $(".card-2 .card-text").css("transition", "ease-in-out .3s");
-    $(".card-2 .fa-chevron-down").css("display", "none");
-    $(".card-2 .fa-chevron-right").css("display", "inline");
-    $(".card-2 .card h5").css("border-bottom", "none");
-  });
-});
 
 $(document).ready(function () {
   $(".card-3 .fa-chevron-right").click(function () {
@@ -51,11 +33,31 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $(".card-3 .fa-chevron-down").click(function () {
-    $(".card-3 .card-text").css("display", "none");
+    $(".card-3 .card-text").slideUp(500);
     $(".card-3 .fa-chevron-down").css("display", "none");
     $(".card-2 .card-text").css("transition", "ease-in-out .3s");
     $(".card-3 .fa-chevron-right").css("display", "inline");
     $(".card-3 .card h5").css("border-bottom", "none");
+  });
+});
+
+$(document).ready(function () {
+  $(".card-4 .fa-chevron-right").click(function () {
+    $(".card-4 .card-text").css("display", "block");
+    $(".card-4 .fa-chevron-right").css("display", "none");
+    $(".card-2 .card-text").css("transition", "ease-in-out .3s");
+    $(".card-4 .fa-chevron-down").css("display", "inline");
+    $(".card-4 .card h5").css("border-bottom", "1px solid #E5E5E5");
+  });
+});
+
+$(document).ready(function () {
+  $(".card-4 .fa-chevron-down").click(function () {
+    $(".card-4 .card-text").slideUp(500);
+    $(".card-4 .fa-chevron-down").css("display", "none");
+    $(".card-2 .card-text").css("transition", "ease-in-out .3s");
+    $(".card-4 .fa-chevron-right").css("display", "inline");
+    $(".card-4 .card h5").css("border-bottom", "none");
   });
 });
 
@@ -97,3 +99,126 @@ $(".flex-img img").hover(
     $(".flex-img img").css("transition", "ease-in-out .3s");
   }
 );
+
+$(".card-1 ").on("mouseenter", function () {
+  $(".card-1 .card-text").slideDown(500);
+  $(".card-1 .fa-chevron-right").css("display", "none");
+  $(".card-1 .fa-chevron-down").css("display", "block");
+});
+
+$(".card-3 ").on("mouseenter", function () {
+  $(".card-3 .card-text").slideDown(500);
+  $(".card-3 .fa-chevron-right").css("display", "none");
+  $(".card-3 .fa-chevron-down").css("display", "block");
+});
+
+$(".card-4 ").on("mouseenter", function () {
+  $(".card-4 .card-text").slideDown(500);
+  $(".card-4 .fa-chevron-right").css("display", "none");
+  $(".card-4 .fa-chevron-down").css("display", "block");
+});
+
+
+let Nav = document.querySelector("nav");
+let btnNav = document.querySelector(".btn-nav");
+
+window.onscroll = function () {
+  if (this.scrollY > 80) {
+    Nav.classList.add("active");
+    btnNav.classList.add("active");
+  } else {
+    Nav.classList.remove("active");
+    btnNav.classList.remove("active");
+  }
+};
+
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 50,
+          freeMode: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+
+        var swiper = new Swiper(".mySwiper", {
+          //slidesPerView: 2,
+          // centeredSlides: true,
+          // centeredSlidesBounds: true,
+          freeMode: true,
+          // spaceBetween: 15,
+          //cssMode: true,
+
+          breakpoints: {
+            // when window width is >= 320px
+            1: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            // when window width is >= 480px
+            426: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            // when window width is >= 640px
+            769: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          },
+        });
+    
+
+            $(".small-c2").hover(function() {
+            $(this).css("background-color", "#1B92EC");
+            $(".fa-book-open").css("color", "white");
+            $(".title1").css("color", "white");
+
+        }, function() {
+            $(this).css("background-color", "white");
+            $(".fa-book-open").css("color", "#FF7A01");
+            $(".title1").css("color", "#1B92EC");
+
+        });
+        $(".small-c3").hover(function() {
+            $(this).css("background-color", "#1B92EC");
+            $(".fa-university").css("color", "white");
+            $(".title2").css("color", "white");
+
+        }, function() {
+            $(this).css("background-color", "white");
+            $(".fa-university").css("color", "#FF7A01");
+            $(".title2").css("color", "#1B92EC");
+
+        });
+        $(".small-c4").hover(function() {
+            $(this).css("background-color", "#1B92EC");
+            $(".fa-graduation-cap").css("color", "white");
+            $(".tittle3").css("color", "white");
+
+        }, function() {
+            $(this).css("background-color", "white");
+            $(".fa-graduation-cap").css("color", "#FF7A01");
+            $(".tittle3").css("color", "#1B92EC");
+
+        });
+        $(".small-c11").hover(function() {
+            $(this).css("background-color", "#1B92EC");
+            $(".fa-trophy").css("color", "white");
+            $(".tittle0").css("color", "white");
+
+        }, function() {
+            $(this).css("background-color", "white");
+            $(".fa-trophy").css("color", "#FF7A01");
+            $(".tittle0").css("color", "#1B92EC");
+
+        });
+        $(".small-c5").hover(function() {
+            $(".internal-circle").css("background-color", "#FF7A01");
+
+        }, function() {
+
+            $(".internal-circle").css("background-color", "#1B92EC");
+
+        });
