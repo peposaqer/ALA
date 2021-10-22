@@ -133,22 +133,12 @@ window.onscroll = function () {
 };
 
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
-  spaceBetween: 50,
   freeMode: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-});
-
-var swiper = new Swiper(".mySwiper", {
-  //slidesPerView: 2,
-  // centeredSlides: true,
-  // centeredSlidesBounds: true,
   freeMode: true,
-  // spaceBetween: 15,
-  //cssMode: true,
 
   breakpoints: {
     // when window width is >= 320px
