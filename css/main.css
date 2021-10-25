@@ -13,6 +13,33 @@
     transition: all 0.5s;
 }
 
+
+.nav-home.active {
+    color: #1b92ec !important;
+    font-weight: bold;
+}
+
+.nav-about.active {
+    color: #1b92ec !important;
+    font-weight: bold;
+}
+
+.nav-servies.active {
+    color: #1b92ec !important;
+    font-weight: bold;
+}
+
+.nav-review.active {
+    color: #1b92ec !important;
+    font-weight: bold;
+}
+
+.nav-contant.active {
+    color: #1b92ec !important;
+    font-weight: bold;
+}
+
+
 .navbar-light .navbar-nav .nav-link:hover {
     color: black;
 }
@@ -204,6 +231,26 @@ nav.active .logo-nav {
         right: -193px;
         top: -150px;
         z-index: 1;
+    }
+
+
+    .img-triangle {
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        background-image: url(../image/image\ 2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 400px;
+        height: 400px;
+        /* transform: rotate(0deg); */
+        position: absolute;
+        right: -778px;
+        top: -476px;
+        z-index: 1;
+        transition: all 1s;
+    }
+
+    .img-triangle:hover {
+        right: -745px;
     }
 }
 
@@ -494,7 +541,7 @@ nav.active .logo-nav {
     /* transform: rotate(0deg); */
     position: absolute;
     right: -695px;
-    top: -478px;
+    top: -476px;
     z-index: 1;
     transition: all 1s;
 }
@@ -579,7 +626,7 @@ nav.active .logo-nav {
         height: 200px;
         position: absolute;
         right: -265px;
-        top: -450px;
+        top: -407px;
         z-index: 1;
     }
 
@@ -797,7 +844,8 @@ body {
     background-position: center;
     background-size: contain;
     height: 100%;
-    width: 100%;
+    /* width: 92%; */
+    max-width: 100%;
     transform: rotate(-18deg);
 }
 
@@ -996,6 +1044,7 @@ body {
 
 .textt p {
     letter-spacing: 1px;
+    line-height: 3;
 }
 
 footer {
@@ -1038,12 +1087,49 @@ footer a:hover {
     text-decoration: none;
 }
 
+@media (max-width: 475px) {
+
+    footer a {
+        font-size: 10px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    footer .foot {
+        display: flex;
+        flex-flow: column;
+    }
+}
+
+.foot {
+    color: darkblue;
+}
+
 @media (max-width: 768px) {
 
 
     .edit-form {
         width: 100%;
     }
+
+    /* 
+    .foot {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .foot li {
+        padding: 1rem;
+    }
+
+    .foot a {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    } */
 
 }
 
@@ -1380,7 +1466,8 @@ footer a:hover {
         color: #1B92EC;
         font-family: Cairo;
         font-size: 9px;
-        left: calc(44px - 141px);
+        left: 20px;
+        width: auto !important;
     }
 
     .small-c2 {
@@ -1420,5 +1507,6 @@ footer a:hover {
         background-size: 70px;
     }
 }
+
 
 /* end */

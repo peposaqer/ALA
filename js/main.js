@@ -20,7 +20,6 @@ $(document).ready(function () {
   });
 });
 
-
 $(document).ready(function () {
   $(".card-3 .fa-chevron-right").click(function () {
     $(".card-3 .card-text").css("display", "block");
@@ -118,7 +117,6 @@ $(".card-4 ").on("mouseenter", function () {
   $(".card-4 .fa-chevron-down").css("display", "block");
 });
 
-
 let Nav = document.querySelector("nav");
 let btnNav = document.querySelector(".btn-nav");
 
@@ -126,6 +124,40 @@ window.onscroll = function () {
   if (this.scrollY > 80) {
     Nav.classList.add("active");
     btnNav.classList.add("active");
+
+    if (this.scrollY > 0) {
+      navHome.classList.add("active");
+      navReview.classList.remove("active");
+      navServies.classList.remove("active");
+      navAbout.classList.remove("active");
+      navContant.classList.remove("active");
+    }
+
+    if (this.scrollY > 1200) {
+      navAbout.classList.add("active");
+      navHome.classList.remove("active");
+    }
+
+    if (this.scrollY > 1700) {
+      navServies.classList.add("active");
+      navAbout.classList.remove("active");
+      navHome.classList.remove("active");
+    }
+
+    if (this.scrollY > 2050) {
+      navReview.classList.add("active");
+      navServies.classList.remove("active");
+      navAbout.classList.remove("active");
+      navHome.classList.remove("active");
+    }
+
+    if (this.scrollY > 2600) {
+      navContant.classList.add("active");
+      navReview.classList.remove("active");
+      navServies.classList.remove("active");
+      navAbout.classList.remove("active");
+      navHome.classList.remove("active");
+    }
   } else {
     Nav.classList.remove("active");
     btnNav.classList.remove("active");
@@ -158,7 +190,7 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
-    
+
 $(".small-c2").hover(
   function () {
     $(this).css("background-color", "#1B92EC");
@@ -215,3 +247,15 @@ $(".small-c5").hover(
     $(".internal-circle").css("background-color", "#1B92EC");
   }
 );
+
+let navHome = document.querySelector(".nav-home");
+let navAbout = document.querySelector(".nav-about");
+let navServies = document.querySelector(".nav-servies");
+let navReview = document.querySelector(".nav-review");
+let navContant = document.querySelector(".nav-contant");
+
+// window.onscroll = function () {
+//   if (this.scrollY < 1300) {
+//     navAbout.classList.add("active");
+//   }
+// };
