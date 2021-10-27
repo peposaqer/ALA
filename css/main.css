@@ -828,6 +828,15 @@ body {
     .card {
         width: 100%;
     }
+
+
+    .flex-img img {
+        width: 90px;
+        height: 380px;
+        background-size: cover;
+        margin-right: 1rem;
+        transition: ease-in-out .3s;
+    }
 }
 
 /* end dream ********************************************** */
